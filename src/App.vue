@@ -4,7 +4,7 @@
       <h1 class="text-blue-500 text-3xl">NorthArc workshop</h1>
 
       <button
-        @click="activeWorkflow = 1"
+        @click="workflow1Click"
         class="underline mr-4"
         :class="{'text-blue-500': activeWorkflow === 1}"
       >Workflow 1</button>
@@ -980,6 +980,12 @@ export default {
       showWorkflow1: false,
       activeWorkflow: 1,
     };
+  },
+  methods: {
+    workflow1Click() {
+      this.activeWorkflow = 1;
+      this.showWorkflow1 = false;
+    },
   },
 };
 </script>
